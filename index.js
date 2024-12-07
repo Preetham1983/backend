@@ -4,7 +4,7 @@ const { HfInference } = require("@huggingface/inference");
 const cors = require("cors");
 
 // Initialize Hugging Face Inference with the API key from environment variables
-const hf = new HfInference(process.env.HUGGING_FACE_API_KEY);
+const hf = new HfInference("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");
 
 // Create an instance of Express
 const app = express();
@@ -17,7 +17,7 @@ app.use(cors());
 
 // Root Endpoint
 app.get("/", (req, res) => {
-  res.send(process.env.HUGGING_FACE_API_KEY);
+  res.send("hiii hello");
 });
 
 // Function to create the prompt for the question-answering task
