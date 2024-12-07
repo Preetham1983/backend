@@ -17,7 +17,7 @@ app.use(cors());
 
 // Root Endpoint
 app.get("/", (req, res) => {
-  res.send("Reached root");
+  res.send(process.env.HUGGING_FACE_API_KEY);
 });
 
 // Function to create the prompt for the question-answering task
